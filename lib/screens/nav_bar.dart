@@ -1,4 +1,3 @@
-import 'package:entre_tiempos/models/menu_options.dart';
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/themes/app_theme.dart';
 import 'package:entre_tiempos/router/app_routes.dart';
@@ -32,7 +31,7 @@ class SideBar extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: double.maxFinite,
             child: ListView.builder(
                 itemBuilder: (context, i) => ListTile(

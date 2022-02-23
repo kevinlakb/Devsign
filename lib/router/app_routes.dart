@@ -7,17 +7,16 @@ class AppRoutes {
 
   static final menuOptions = <MenuOption>[
     MenuOption(
-        route: 'login1_1',
-        name: 'Login 1.1',
-        screen: const Login1(),
+        route: 'Login1',
+        name: 'Login 1',
+        screen: const LoginScreen1(),
         icon: Icons.bug_report),
     MenuOption(
-        route: 'login1_2',
-        name: 'Login 1.2',
-        screen: const Login2(),
+        route: 'Login2',
+        name: 'Login 2',
+        screen: const LoginScreen2(),
         icon: Icons.bug_report),
   ];
-
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
     appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
@@ -31,7 +30,7 @@ class AppRoutes {
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     return MaterialPageRoute(
-      builder: (context) => const Login1(),
+      builder: (context) => const LoginScreen1(),
     );
   }
 }
