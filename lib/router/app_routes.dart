@@ -3,9 +3,14 @@ import 'package:entre_tiempos/models/menu_options.dart';
 import 'package:entre_tiempos/screens/screens.dart';
 
 class AppRoutes {
-  static const initialRoute = 'home';
+  static const initialRoute = 'Home';
 
   static final menuOptions = <MenuOption>[
+    MenuOption(
+        route: initialRoute,
+        name: 'Inicio',
+        screen: const HomeScreen(),
+        icon: Icons.home_outlined),
     MenuOption(
         route: 'Login1',
         name: 'Login 1',
@@ -19,7 +24,8 @@ class AppRoutes {
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
-    appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
+    appRoutes
+        .addAll({initialRoute: (BuildContext context) => const HomeScreen()});
 
     for (final option in menuOptions) {
       appRoutes.addAll({option.route: (BuildContext context) => option.screen});

@@ -22,7 +22,7 @@ class AppTheme {
       // ElevatedButtons
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-            primary: Colors.indigo, shape: const StadiumBorder(), elevation: 0),
+            primary: primary, shape: const StadiumBorder(), elevation: 0),
       ),
       inputDecorationTheme: const InputDecorationTheme(
         floatingLabelStyle: TextStyle(color: primary),

@@ -109,7 +109,7 @@ class ButtonNavigator extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Positioned(
-      bottom: MediaQuery.of(context).viewInsets.bottom + size.width * 0.1,
+      bottom: MediaQuery.of(context).viewInsets.bottom + size.height * 0.04,
       left: size.width * 0.1,
       right: size.width * 0.1,
       child: SizedBox(
