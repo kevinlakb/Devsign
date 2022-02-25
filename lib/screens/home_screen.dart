@@ -14,7 +14,10 @@ class HomeScreen extends StatelessWidget {
         title: const Text('DEBERES',
             style: TextStyle(fontSize: 20, color: Colors.white)),
       ),
-      body: const Center(),
+      body: Center(
+          child: Column(
+        children: const [],
+      )),
     );
   }
 }

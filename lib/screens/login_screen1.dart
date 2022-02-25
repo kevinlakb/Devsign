@@ -1,12 +1,17 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/themes/app_theme.dart';
-import 'package:entre_tiempos/router/app_routes.dart';
+import 'package:entre_tiempos/models/user.dart';
 
 class LoginScreen1 extends StatelessWidget {
   const LoginScreen1({Key? key}) : super(key: key);
-
+  static final User datauser = User();
   static final TextEditingController _namecontroller = TextEditingController();
+
+  static String getname() {
+    datauser.name = _namecontroller.text;
+    return datauser.getname;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class LoginScreen1 extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           LoginTitle(namecontroller: _namecontroller),
-          const ButtonNavigator(),
+          const Button(),
         ],
       ),
     );
@@ -31,19 +36,20 @@ class LoginTitle extends StatelessWidget {
   final TextEditingController _namecontroller;
   @override
   Widget build(BuildContext context) {
-    //final size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
     // final padding = MediaQuery.of(context).padding;
     // final safeHeight = size.height - padding.top - padding.bottom;
     return Container(
-      margin: const EdgeInsets.only(top: 140, bottom: 0, right: 20, left: 20),
+      margin: EdgeInsets.only(
+          top: size.height * 0.2, bottom: 0, right: 20, left: 20),
       child: Center(
         child: Column(
           children: <Widget>[
-            const Text('Hola, bienvenido a', style: TextStyle(fontSize: 20)),
-            const Text(
-              'EntreTiempos',
-              style: TextStyle(fontSize: 40, color: AppTheme.primary),
-            ),
+            const Text('Hola, bienvenido a',
+                style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
+            const Text('EntreTiempos',
+                style: TextStyle(fontSize: 40, color: AppTheme.primary),
+                textAlign: TextAlign.center),
             InputUser(namecontroller: _namecontroller)
           ],
         ),
@@ -66,7 +72,7 @@ class InputUser extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 50),
       child: SizedBox(
-        width: 280,
+        width: 240,
         child: TextField(
           controller: _namecontroller,
           textAlign: TextAlign.left,
@@ -77,19 +83,12 @@ class InputUser extends StatelessWidget {
               fontSize: 18,
               color: AppTheme.primary,
             ),
-            enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(
-              color: AppTheme.primary,
-              width: 1.0,
-            )),
-            focusedBorder: const OutlineInputBorder(
-                borderSide: BorderSide(
-              color: AppTheme.primary,
-              width: 1.0,
-            )),
             suffixIcon: InkWell(
               onTap: () => _namecontroller.clear(),
-              child: const Icon(Icons.cancel),
+              child: const Icon(
+                Icons.cancel,
+                color: Colors.grey,
+              ),
             ),
           ),
           keyboardType: TextInputType.name,
@@ -101,10 +100,11 @@ class InputUser extends StatelessWidget {
   }
 }
 
-class ButtonNavigator extends StatelessWidget {
-  const ButtonNavigator({
+class Button extends StatelessWidget {
+  const Button({
     Key? key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -121,7 +121,9 @@ class ButtonNavigator extends StatelessWidget {
           ),
           child: const Text('SIGUIENTE',
               style: TextStyle(fontSize: 20, color: Colors.white)),
-          onPressed: () => {Navigator.pushNamed(context, 'Login2')},
+          onPressed: () => {
+            Navigator.pushNamed(context, 'Login2'),
+          },
         ),
       ),
     );

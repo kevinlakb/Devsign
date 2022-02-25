@@ -1,11 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/themes/app_theme.dart';
 
 class LoginScreen2 extends StatelessWidget {
   const LoginScreen2({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -77,7 +74,9 @@ class Buttons extends StatelessWidget {
             ),
             child: const Text('OMITIR',
                 style: TextStyle(fontSize: 20, color: Colors.white)),
-            onPressed: () => {},
+            onPressed: () => {
+              Navigator.pushNamed(context, 'Test'),
+            },
           ),
         ),
       ],
