@@ -16,8 +16,14 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
           child: Column(
-        children: const [],
+        children: const [
+          Text('Prueba Tarea'),
+        ],
       )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => null,
+        child: const Icon(Icons.add),
+      ) ,
     );
   }
 }
