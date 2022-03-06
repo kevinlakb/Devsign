@@ -19,7 +19,7 @@ class TestScreen0 extends StatelessWidget {
             child: Center(
               child: Column(
                 children: <Widget>[
-                  Text('Bienvenido ' + username,
+                  Text('Bienvenid@ ' + username,
                       style: const TextStyle(
                           fontSize: 40, color: AppTheme.primary),
                       textAlign: TextAlign.center),
@@ -52,7 +52,7 @@ class TestScreen0 extends StatelessWidget {
                 child: const Text('SIGUIENTE',
                     style: TextStyle(fontSize: 20, color: Colors.white)),
                 onPressed: () => {
-                  Navigator.pushNamed(context, 'Home'),
+                  Navigator.pushNamed(context, 'Test1'),
                 },
               ),
             ),

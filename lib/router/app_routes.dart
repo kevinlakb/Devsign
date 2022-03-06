@@ -1,12 +1,9 @@
-import 'package:entre_tiempos/screens/concentration_screen.dart';
-import 'package:entre_tiempos/screens/music_screen.dart';
-import 'package:entre_tiempos/screens/progress_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/models/menu_options.dart';
 import 'package:entre_tiempos/screens/screens.dart';
 
 class AppRoutes {
-  static const initialRoute = 'Login1';
+  static const initialRoute = 'Home';
 
   static final menuOptions = <MenuOption>[
     MenuOption(
@@ -50,6 +47,21 @@ class AppRoutes {
         route: 'Test',
         name: 'Test',
         screen: const TestScreen0(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test1',
+        name: 'Test1',
+        screen: const TestScreen1(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test2',
+        name: 'Test2',
+        screen: const TestScreen2(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Development',
+        name: 'Desarrollo',
+        screen: const DevelopmentScreen(),
         icon: Icons.bug_report),
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
