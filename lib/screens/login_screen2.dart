@@ -39,7 +39,6 @@ class Buttons extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(bottom: 20),
           height: 50,
-          width: double.infinity,
           child: ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all<Color>(Colors.white),

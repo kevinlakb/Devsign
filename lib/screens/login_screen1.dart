@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/themes/app_theme.dart';
 import 'package:entre_tiempos/models/user.dart';
@@ -69,10 +68,11 @@ class InputUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(top: 50),
       child: SizedBox(
-        width: 240,
+        width: size.width * 0.6,
         child: TextField(
           controller: _namecontroller,
           textAlign: TextAlign.left,
@@ -83,6 +83,7 @@ class InputUser extends StatelessWidget {
               fontSize: 18,
               color: AppTheme.primary,
             ),
+            counterText: '',
             suffixIcon: InkWell(
               onTap: () => _namecontroller.clear(),
               child: const Icon(
