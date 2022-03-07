@@ -59,12 +59,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 20,
               )
             ],
-          )
+          ),
+          const AppBarAction(),
         ],
         title: Text('Hola!, $username',
             style: const TextStyle(
                 fontFamily: 'Roboto', fontSize: 22, color: AppTheme.primary)),
-        toolbarHeight: 60,
         elevation: 0,
       ),
       body: Column(
