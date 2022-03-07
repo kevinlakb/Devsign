@@ -1,9 +1,10 @@
+import 'package:entre_tiempos/screens/work/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/models/menu_options.dart';
 import 'package:entre_tiempos/screens/screens.dart';
 
 class AppRoutes {
-  static const initialRoute = 'Login1';
+  static const initialRoute = 'Work';
 
   static final menuOptions = <MenuOption>[
     MenuOption(
@@ -62,6 +63,11 @@ class AppRoutes {
         route: 'Development',
         name: 'Desarrollo',
         screen: const DevelopmentScreen(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Work',
+        name: 'Trajado',
+        screen: const WorkScreen(),
         icon: Icons.bug_report),
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
