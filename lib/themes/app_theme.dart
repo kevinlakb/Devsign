@@ -11,6 +11,8 @@ class AppTheme {
 
       // AppBar Theme
       appBarTheme: const AppBarTheme(
+        toolbarHeight: 60,
+        titleTextStyle: TextStyle(fontSize: 22, fontFamily: 'Roboto'),
         color: primary,
         elevation: 2,
         //titleTextStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
