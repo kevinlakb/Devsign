@@ -5,7 +5,7 @@ import 'package:entre_tiempos/screens/screens.dart';
 
 class AppRoutes {
 
-  static const initialRoute = 'Work';
+  static const initialRoute = 'NotasTareasScreen';
 
 
 
@@ -72,6 +72,11 @@ class AppRoutes {
         name: 'Trajado',
         screen: const WorkScreen(),
         icon: Icons.bug_report),
+    MenuOption(
+        route: 'NotasTareasScreen',
+        name: 'NOTAS EXPOSICIÓN',
+        screen: const NotasTareasScreen(),
+        icon: Icons.bug_report),        
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
