@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           y0ffset = -size.height * 0.4;
                         });
                       },
-                      icon: const Icon(Icons.calendar_month_outlined, size: 25),
+                      icon: const Icon(Icons.calendar_today, size: 25),
                       color: AppTheme.primary,
                     )
                   : IconButton(
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           y0ffset = 0;
                         });
                       },
-                      icon: const Icon(Icons.calendar_month_rounded, size: 25),
+                      icon: const Icon(Icons.calendar_today, size: 25),
                       color: AppTheme.primary,
                     ),
               const SizedBox(
