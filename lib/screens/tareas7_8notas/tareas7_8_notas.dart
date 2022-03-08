@@ -15,6 +15,12 @@ class _NotasTareasScreenState extends State<NotasTareasScreen> {
       TextEditingController();
   static final TextEditingController _contenidoController =
       TextEditingController(); */
+Future<void> refresh() async{
+setState(() {
+  
+});
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,18 +41,21 @@ class _NotasTareasScreenState extends State<NotasTareasScreen> {
         
         Container(
           padding: const  EdgeInsets.only( left: 20 , right: 20 , top:30 , bottom: 20) , 
-          child: ListView(
-            
-            children: [
-              for (Nota nota in Nota.misNotas)
-                ListTile(
-                  
-                  title: Text(nota.titulo! , style: const TextStyle(fontWeight: FontWeight.bold)),
-                  
-                  subtitle: Text(nota.contenido!),
-                )
-            ],
-           ),
+          child: RefreshIndicator(
+            onRefresh: refresh,
+            child: ListView(
+              
+              children: [
+                for (Nota nota in Nota.misNotas)
+                  ListTile(
+                    
+                    title: Text(nota.titulo! , style: const TextStyle(fontWeight: FontWeight.bold)),
+                    
+                    subtitle: Text(nota.contenido!),
+                  )
+              ],
+             ),
+          ),
           ),
         ]
       ),
