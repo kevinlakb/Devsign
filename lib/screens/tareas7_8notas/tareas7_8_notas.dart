@@ -24,7 +24,17 @@ class _NotasTareasScreenState extends State<NotasTareasScreen> {
       body: Stack(
         children: [
         Container(
-          padding: const  EdgeInsets.all(20) ,
+          alignment: Alignment.topCenter,
+            padding: const  EdgeInsets.only( left: 20 , right: 20 , top:10) ,
+            child: const Text(
+              'AGREGA TUS NOTAS PARA PARCTICAR TUS LINEAS',
+              style:  TextStyle(fontStyle: FontStyle.italic)
+              
+            ),
+        ),
+        
+        Container(
+          padding: const  EdgeInsets.only( left: 20 , right: 20 , top:30 , bottom: 20) , 
           child: ListView(
             
             children: [

@@ -8,7 +8,7 @@ class Nota {
     this.contenido,
     //this.key
   });
-
+//Angie 
   String? titulo;
   String? contenido;
   //String? key;
