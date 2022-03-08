@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static const Color primary = Color.fromRGBO(68, 43, 134, 1);
-  static const Color bgWhite = Color.fromARGB(60, 255, 255, 255);
+  static const Color bgWhite = Color.fromARGB(40, 255, 255, 255);
   static const Color kOrangeLight = Color.fromRGBO(242, 137, 20, 1);
   static const Color kOrangeDark = Color.fromARGB(100, 242, 137, 20);
 
   static const Color kYellowLight = Color.fromRGBO(252, 192, 21, 1);
+  static const Color kYellowTransparent = Color.fromRGBO(252, 192, 21, 0.2);
   static const Color kYellowDark = Color.fromARGB(100, 252, 192, 21);
 
   static const Color kRedLight = Color.fromRGBO(205, 19, 61, 1);
