@@ -1,9 +1,11 @@
+import 'package:entre_tiempos/screens/present_screen.dart';
 import 'package:entre_tiempos/screens/work/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/models/menu_options.dart';
 import 'package:entre_tiempos/screens/screens.dart';
 
 class AppRoutes {
+
 
   static const initialRoute = 'NotasTareasScreen';
 
@@ -35,6 +37,11 @@ class AppRoutes {
         name: 'Modo concentración',
         screen: const ConcentrationScreen(),
         icon: Icons.border_all_outlined),
+    MenuOption(
+        route: 'Development',
+        name: 'Desarrollo',
+        screen: const DevelopmentScreen(),
+        icon: Icons.bug_report),
   ];
   static final menuOptionsHidden = <MenuOption>[
     MenuOption(
@@ -73,10 +80,17 @@ class AppRoutes {
         screen: const WorkScreen(),
         icon: Icons.bug_report),
     MenuOption(
+   
         route: 'NotasTareasScreen',
         name: 'NOTAS EXPOSICIÓN',
         screen: const NotasTareasScreen(),
         icon: Icons.bug_report),        
+   MenuOption(
+        route: 'Present',
+        name: 'Present',
+        screen: const PresentScreen(),
+        icon: Icons.bug_report),
+
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};

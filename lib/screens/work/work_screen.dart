@@ -94,7 +94,7 @@ class WorkScreen extends StatelessWidget {
           ],
         )),
         Positioned(
-          bottom: 22,
+          bottom: 18,
           child: Row(children: [
             SizedBox(
               width: size.width * 0.05,
