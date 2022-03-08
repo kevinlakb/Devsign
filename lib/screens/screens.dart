@@ -8,3 +8,4 @@ export 'package:entre_tiempos/screens/progress/progress_screen.dart';
 export 'package:entre_tiempos/screens/completed_tasks_screen.dart';
 export 'package:entre_tiempos/screens/concentration_screen.dart';
 export 'package:entre_tiempos/screens/development_screen.dart';
+export 'package:entre_tiempos/screens/present_screen.dart';

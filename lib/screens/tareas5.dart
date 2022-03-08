@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:entre_tiempos/themes/app_theme.dart';
 
-class tareas5Screen extends StatelessWidget {
+class Tareas5Screen extends StatelessWidget {
    
-  const tareas5Screen({Key? key}) : super(key: key);
+  const Tareas5Screen({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-         child: Text('tareas5Screen'),
+    return  Scaffold(
+      appBar: AppBar(
+        //shadowColor: Colors.white,
+        iconTheme: const IconThemeData(color: AppTheme.primary),
+        backgroundColor: Colors.white,
+        elevation: 5,
+        title: const Text('DESARROLLO',
+            style: TextStyle(fontSize: 20, color:AppTheme.primary)),
       ),
+      body: Container()
     );
   }
 }

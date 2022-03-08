@@ -9,9 +9,9 @@ class CompletedTasksScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('CompletedTasksScreen'),
       ),
-      body: const Center(
-        child: Text('CompletedTasksScreen'),
-      ),
+      body:  Container(
+          )
+
     );
   }
 }
