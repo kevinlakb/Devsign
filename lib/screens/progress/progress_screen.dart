@@ -6,9 +6,16 @@ class ProgressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ProgressScreen')),
-      body: const Center(
-        child: Text('ProgressScreen'),
+      appBar: AppBar(title: const Text('PROGRESO')),
+      body: ListView(
+    
+        children:const  [
+           Image(image: AssetImage('assets/images/progress/Group55.png') , alignment: Alignment.center),
+           Image(image: AssetImage('assets/images/progress/group_56.png') , alignment: Alignment.center),
+
+
+        ],
+
       ),
     );
   }
