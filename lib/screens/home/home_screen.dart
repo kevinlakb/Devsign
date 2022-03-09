@@ -89,14 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
             AnimatedContainer(
                 duration: const Duration(milliseconds: 500),
                 transform: Matrix4.translationValues(0, y0ffset, 0),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: const [
-                      //const Info(),
-                      Tasks(),
-                    ],
-                  ),
-                )),
+                child: const Tasks()),
           ]),
       floatingActionButton: Container(
         height: size.width * 0.15,
@@ -225,20 +218,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     content: Text(
                                                         'Processing Data')),
                                               );
-                                              setState(() {
-                                                mystate(() {
-                                                  AppTask.setTask(Task(
-                                                      title:
-                                                          _titlecontroller.text,
-                                                      priority:
-                                                          _prioritycontroller,
-                                                      description:
-                                                          _descriptioncontroller
-                                                              .text,
-                                                      date: DateTime.parse(
-                                                          date)));
-                                                  Navigator.pop(context);
-                                                });
+                                              mystate(() {
+                                                AppTask.setTask(Task(
+                                                    title:
+                                                        _titlecontroller.text,
+                                                    priority:
+                                                        _prioritycontroller,
+                                                    description:
+                                                        _descriptioncontroller
+                                                            .text,
+                                                    date: _dateTime));
+                                              });
+                                              mystate(() {
+                                                Navigator.pop(context);
                                               });
                                             }
                                           }),
@@ -381,7 +373,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   );
                                                   mystate(() {
                                                     date =
-                                                        DateFormat('yyyy-MM-dd')
+                                                        DateFormat('dd-MM-yy')
                                                             .format(_dateTime ??
                                                                 DateTime.now());
                                                   });

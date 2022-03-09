@@ -4,7 +4,7 @@ import 'package:entre_tiempos/models/menu_options.dart';
 import 'package:entre_tiempos/screens/screens.dart';
 
 class AppRoutes {
-  static const initialRoute = 'Home';
+  static const initialRoute = 'Login1';
 
   static final menuOptions = <MenuOption>[
     MenuOption(
@@ -58,6 +58,26 @@ class AppRoutes {
         route: 'Test2',
         name: 'Test2',
         screen: const TestScreen2(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test3',
+        name: 'Test3',
+        screen: const TestScreen3(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test4',
+        name: 'Test4',
+        screen: const TestScreen4(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test5',
+        name: 'Test5',
+        screen: const TestScreen5(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test6',
+        name: 'Test6',
+        screen: const TestScreen6(),
         icon: Icons.bug_report),
     MenuOption(
         route: 'Development',
