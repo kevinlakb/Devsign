@@ -15,7 +15,7 @@ class MusicScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MUSICA'),
+        title: const Text('MÚSICA'),
       ),
       body: Column(
         children: [
