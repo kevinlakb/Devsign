@@ -39,7 +39,7 @@ class _TasksState extends State<Tasks> {
                 margin: const EdgeInsets.only(bottom: 5, top: 5),
                 alignment: Alignment.centerLeft,
                 child: Text(
-                    '${tasksList[i].date!.weekday} de ${months[tasksList[i].date!.month - 1]} del  ${tasksList[i].date!.year}',
+                    '${tasksList[i].date!.day} de ${months[tasksList[i].date!.month - 1]} del  ${tasksList[i].date!.year}',
                     style: const TextStyle(fontSize: 16)),
               ),
               AnimatedContainer(
