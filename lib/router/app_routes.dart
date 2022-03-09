@@ -1,4 +1,5 @@
 import 'package:entre_tiempos/screens/present_screen.dart';
+import 'package:entre_tiempos/screens/tareas7_8notas/nueva_nota.dart';
 import 'package:entre_tiempos/screens/work/work_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/models/menu_options.dart';
@@ -7,7 +8,7 @@ import 'package:entre_tiempos/screens/screens.dart';
 class AppRoutes {
 
 
-  static const initialRoute = 'NotasTareasScreen';
+  static const initialRoute = 'Home';
 
 
 
@@ -42,6 +43,11 @@ class AppRoutes {
         name: 'Desarrollo',
         screen: const DevelopmentScreen(),
         icon: Icons.bug_report),
+
+    MenuOption(route: 'NuevaNotaScreen', 
+              icon: Icons.bug_report, 
+              screen: const NuevaNotaScreen(),
+              name: 'Nueva ' )
   ];
   static final menuOptionsHidden = <MenuOption>[
     MenuOption(
