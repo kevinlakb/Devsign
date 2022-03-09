@@ -8,7 +8,7 @@ import 'package:entre_tiempos/screens/screens.dart';
 class AppRoutes {
 
 
-  static const initialRoute = 'ConcentrationScreen';
+  static const initialRoute = 'Home';
 
 
 
