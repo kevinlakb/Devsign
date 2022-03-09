@@ -8,6 +8,7 @@ import 'package:entre_tiempos/screens/screens.dart';
 class AppRoutes {
 
 
+
   static const initialRoute = 'Home';
 
 
@@ -74,6 +75,26 @@ class AppRoutes {
         route: 'Test2',
         name: 'Test2',
         screen: const TestScreen2(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test3',
+        name: 'Test3',
+        screen: const TestScreen3(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test4',
+        name: 'Test4',
+        screen: const TestScreen4(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test5',
+        name: 'Test5',
+        screen: const TestScreen5(),
+        icon: Icons.bug_report),
+    MenuOption(
+        route: 'Test6',
+        name: 'Test6',
+        screen: const TestScreen6(),
         icon: Icons.bug_report),
     MenuOption(
         route: 'Development',

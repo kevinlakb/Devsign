@@ -90,7 +90,7 @@ class TestScreen1 extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                         splashColor: const Color.fromARGB(100, 255, 255, 255),
-                        onTap: () => {Navigator.pushNamed(context, 'Home')},
+                        onTap: () => {Navigator.pushNamed(context, 'Test2')},
                       )),
                   Positioned(
                       top: 0,
