@@ -21,26 +21,25 @@ class DevelopmentScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: genContHeight,
-                  width: genlWidth,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade300,
-                        blurRadius: 2.0,
-                        spreadRadius: 0.0,
-                        offset: const Offset(
-                            2.0, 5.0), // shadow direction: bottom right
-                      )
-                    ],
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, 'Work');
-                    },
+
+                InkWell(
+                  child: Container(
+                    height: genContHeight,
+                    width: genlWidth,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade300,
+                          blurRadius: 2.0,
+                          spreadRadius: 0.0,
+                          offset: const Offset(
+                              2.0, 5.0), // shadow direction: bottom right
+                        )
+                      ],
+                    ),
+
                     child: Row(children: [
                       Container(
                           width: imgWidth,
@@ -105,6 +104,11 @@ class DevelopmentScreen extends StatelessWidget {
                           )),
                     ]),
                   ),
+
+                  onTap: () {
+                    Navigator.pushNamed(context, 'Work');
+                  },
+
                 ),
 //
                 // 2 <- -------------------------------------------------

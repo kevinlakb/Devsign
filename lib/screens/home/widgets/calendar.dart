@@ -43,7 +43,7 @@ class _CalendarState extends State<Calendar> {
       duration: const Duration(milliseconds: 500),
       transform: widget.y0ffset
           ? (Matrix4.translationValues(0, 0, 0)..scale(1.0))
-          : (Matrix4.translationValues(size.width - 280, 0, 0)..scale(0.0)),
+          : (Matrix4.translationValues(0, 0, 0)..scale(0.0)),
       child: Column(
         children: [
           TableCalendar(
@@ -65,7 +65,6 @@ class _CalendarState extends State<Calendar> {
                 selectedDay = selectDay;
                 focusedDay = focusDay;
               });
-              print(focusedDay);
             },
             selectedDayPredicate: (DateTime date) {
               return isSameDay(selectedDay, date);
@@ -81,7 +80,7 @@ class _CalendarState extends State<Calendar> {
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(5.0),
               ),
-              selectedTextStyle: TextStyle(color: Colors.white),
+              selectedTextStyle: const TextStyle(color: Colors.white),
               todayDecoration: BoxDecoration(
                 color: Colors.blue,
                 shape: BoxShape.rectangle,
