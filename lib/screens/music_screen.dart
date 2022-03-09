@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 
 class MusicScreen extends StatelessWidget {
@@ -21,7 +19,7 @@ class MusicScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-         const  Divider(
+          const Divider(
             height: 10,
           ),
           const Text(
@@ -169,7 +167,7 @@ class MusicScreen extends StatelessWidget {
               ],
             ),
           ),
-           const Divider(
+          const Divider(
             height: 30,
           ),
           const Text(

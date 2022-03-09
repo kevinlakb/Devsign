@@ -38,6 +38,7 @@ dependencies:
   table_calendar: ^3.0.4
   flutter_speed_dial: ^5.0.0+1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
