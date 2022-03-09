@@ -45,10 +45,15 @@ class LoginTitle extends StatelessWidget {
         child: Column(
           children: <Widget>[
             const Text('Hola, bienvenido a',
-                style: TextStyle(fontSize: 20), textAlign: TextAlign.center),
-            const Text('EntreTiempos',
-                style: TextStyle(fontSize: 40, color: AppTheme.primary),
+                style: TextStyle(fontSize: 30, fontFamily: 'Roboto'),
                 textAlign: TextAlign.center),
+            SizedBox(
+              height: 120,
+              child: Image.asset(
+                'assets/images/Logotipomorado.png',
+                fit: BoxFit.cover,
+              ),
+            ),
             InputUser(namecontroller: _namecontroller)
           ],
         ),
@@ -70,7 +75,7 @@ class InputUser extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.only(top: 50),
+      margin: const EdgeInsets.only(top: 20),
       child: SizedBox(
         width: size.width * 0.6,
         child: TextField(
@@ -83,6 +88,21 @@ class InputUser extends StatelessWidget {
               fontSize: 18,
               color: AppTheme.primary,
             ),
+            floatingLabelStyle: const TextStyle(color: AppTheme.primary),
+            enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: AppTheme.primary),
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    topRight: Radius.circular(10))),
+            focusedBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: AppTheme.primary),
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    topRight: Radius.circular(10))),
+            border: const OutlineInputBorder(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    topRight: Radius.circular(10))),
             counterText: '',
             suffixIcon: InkWell(
               onTap: () => _namecontroller.clear(),

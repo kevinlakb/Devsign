@@ -45,29 +45,50 @@ class WorkScreen extends StatelessWidget {
                 )
               ]),
             ),
-            Container(
-                margin: const EdgeInsets.only(bottom: 50),
-                padding: const EdgeInsets.all(10),
-                width: size.width * 0.5,
-                decoration: BoxDecoration(
-                  color: kRedLight,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade300,
-                      blurRadius: 2.0,
-                      spreadRadius: 0.0,
-                      offset: const Offset(
-                          2.0, 5.0), // shadow direction: bottom right
-                    )
-                  ],
-                ),
-                child: const Text(
-                  'EMPEZAR',
-                  style: TextStyle(
-                      fontSize: 20, fontFamily: 'Roboto', color: Colors.white),
-                  textAlign: TextAlign.center,
-                )),
+            InkWell(
+              child: Container(
+                  margin: const EdgeInsets.only(bottom: 50),
+                  padding: const EdgeInsets.all(10),
+                  width: size.width * 0.5,
+                  decoration: BoxDecoration(
+                    color: kRedLight,
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade300,
+                        blurRadius: 2.0,
+                        spreadRadius: 0.0,
+                        offset: const Offset(
+                            2.0, 5.0), // shadow direction: bottom right
+                      )
+                    ],
+                  ),
+                  child: const Text(
+                    'EMPEZAR',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'Roboto',
+                        color: Colors.white),
+                    textAlign: TextAlign.center,
+                  )),
+              onTap: () {
+                // showDialog(
+                //     context: context,
+                //     builder: (contex) => Positioned(
+                //           left: 0,
+                //           bottom: 0,
+                //           child: AnimatedContainer(
+                //             duration: const Duration(milliseconds: 1000),
+                //             height: size.height * 0.5,
+                //             width: double.infinity,
+                //             decoration: BoxDecoration(
+                //               color: Colors.white,
+                //               borderRadius: BorderRadius.circular(10),
+                //             ),
+                //           ),
+                //         )),
+              },
+            ),
             SizedBox(
               width: size.width * 0.4,
               child: const Text(
