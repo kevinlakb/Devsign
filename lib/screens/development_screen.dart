@@ -21,6 +21,7 @@ class DevelopmentScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+
                 InkWell(
                   child: Container(
                     height: genContHeight,
@@ -38,6 +39,7 @@ class DevelopmentScreen extends StatelessWidget {
                         )
                       ],
                     ),
+
                     child: Row(children: [
                       Container(
                           width: imgWidth,
@@ -102,9 +104,11 @@ class DevelopmentScreen extends StatelessWidget {
                           )),
                     ]),
                   ),
+
                   onTap: () {
                     Navigator.pushNamed(context, 'Work');
                   },
+
                 ),
 //
                 // 2 <- -------------------------------------------------
@@ -125,67 +129,73 @@ class DevelopmentScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: Row(children: [
-                    Container(
-                        width: imgWidth,
-                        height: double.maxFinite,
-                        decoration: const BoxDecoration(
-                          color: Color.fromRGBO(252, 192, 21, 1),
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(15),
-                              bottomLeft: Radius.circular(15)),
-                        ),
-                        child: Center(
-                            child: Image.asset(
-                          'assets/images/exposicion.png',
-                          width: imgSize,
-                          height: imgSize,
-                        ))),
-                    Container(
-                        padding: const EdgeInsets.only(
-                            left: 30, top: 20, right: 10, bottom: 10),
-                        width: textWidth,
-                        height: double.maxFinite,
-                        decoration: const BoxDecoration(
-                            color: Color.fromRGBO(252, 192, 21, 0.2),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'Present');
+                    },
+                    child: Row(children: [
+                      Container(
+                          width: imgWidth,
+                          height: double.maxFinite,
+                          decoration: const BoxDecoration(
+                            color: Color.fromRGBO(252, 192, 21, 1),
                             borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(15),
-                                bottomRight: Radius.circular(15))),
-                        child: Column(
-                          children: [
-                            Stack(
-                              children: [
-                                Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Text(
-                                    'Prepara una exposición',
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        fontSize: size.width > 520 ? 20 : 18,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.black),
+                                topLeft: Radius.circular(15),
+                                bottomLeft: Radius.circular(15)),
+                          ),
+                          child: Center(
+                              child: Image.asset(
+                            'assets/images/exposicion.png',
+                            width: imgSize,
+                            height: imgSize,
+                          ))),
+                      Container(
+                          padding: const EdgeInsets.only(
+                              left: 30, top: 20, right: 10, bottom: 10),
+                          width: textWidth,
+                          height: double.maxFinite,
+                          decoration: const BoxDecoration(
+                              color: Color.fromRGBO(252, 192, 21, 0.2),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(15),
+                                  bottomRight: Radius.circular(15))),
+                          child: Column(
+                            children: [
+                              Stack(
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      'Prepara una exposición',
+                                      style: TextStyle(
+                                          fontFamily: 'Roboto',
+                                          fontSize: size.width > 520 ? 20 : 18,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black),
+                                    ),
                                   ),
-                                ),
-                                const Positioned(
-                                    right: 0,
-                                    bottom: 0,
-                                    child: Text('1h',
-                                        style: TextStyle(fontFamily: 'Roboto')))
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                                'Te ayudaremos a organizar mejor tus ideas y poder practicar tu presentasión de manera mas eficiente',
-                                style: TextStyle(
-                                    fontFamily: 'Open Sans',
-                                    fontSize: size.width > 520 ? 16 : 14,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.black54))
-                          ],
-                        )),
-                  ]),
+                                  const Positioned(
+                                      right: 0,
+                                      bottom: 0,
+                                      child: Text('1h',
+                                          style:
+                                              TextStyle(fontFamily: 'Roboto')))
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                  'Te ayudaremos a organizar mejor tus ideas y poder practicar tu presentasión de manera mas eficiente',
+                                  style: TextStyle(
+                                      fontFamily: 'Open Sans',
+                                      fontSize: size.width > 520 ? 16 : 14,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.black54))
+                            ],
+                          )),
+                    ]),
+                  ),
                 ),
 //
                 // 3 <- --------------------------------------------------------------
