@@ -1,3 +1,4 @@
+import 'package:entre_tiempos/screens/music.dart';
 import 'package:entre_tiempos/screens/present_screen.dart';
 import 'package:entre_tiempos/screens/tareas7_8notas/nueva_nota.dart';
 import 'package:entre_tiempos/screens/work/work_screen.dart';
@@ -30,9 +31,9 @@ class AppRoutes {
         screen: const ProgressScreen(),
         icon: Icons.stacked_bar_chart),
     MenuOption(
-        route: 'MusicScreen',
+        route: 'Music',
         name: 'Música',
-        screen: const MusicScreen(),
+        screen: const Music(),
         icon: Icons.queue_music_rounded),
     MenuOption(
         route: 'ConcentrationScreen',
@@ -48,7 +49,9 @@ class AppRoutes {
     MenuOption(route: 'NuevaNotaScreen', 
               icon: Icons.bug_report, 
               screen: const NuevaNotaScreen(),
-              name: 'Nueva ' )
+              name: 'Nueva ' ),
+
+             
   ];
   static final menuOptionsHidden = <MenuOption>[
     MenuOption(
