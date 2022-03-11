@@ -164,15 +164,20 @@ class WorkScreen extends StatelessWidget {
           icon: Icons.rocket_launch_rounded,
           children: [
             SpeedDialChild(
-              child: const Icon(Icons.queue_music_rounded, size: 30),
+              
+              child:  IconButton(onPressed:() => {Navigator.pushNamed(context, 'Music')}, icon: const Icon(Icons.queue_music_rounded, size: 30),),
               label: 'Música',
             ),
             SpeedDialChild(
-              child: const Icon(Icons.engineering, size: 30),
+              child: IconButton(onPressed: () {
+                Navigator.pushNamed(context, 'ConcentrationScreen');
+              }, icon: const Icon(Icons.engineering, size: 30),) ,
               label: 'Modo concentración',
             ),
             SpeedDialChild(
-              child: const Icon(Icons.check_circle, size: 30),
+              child: IconButton(onPressed: () {
+                Navigator.pushNamed(context, 'Home');
+              }, icon:const Icon(Icons.check_circle, size: 30) ,) ,
               label: 'Misión cumplida',
             )
           ]),

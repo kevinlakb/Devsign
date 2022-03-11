@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:entre_tiempos/themes/app_theme.dart';
 import 'package:entre_tiempos/router/app_routes.dart';
+import 'package:entre_tiempos/screens/login_screen1.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({Key? key}) : super(key: key);
@@ -8,14 +9,15 @@ class SideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final menuOptions = AppRoutes.menuOptions;
+    final username = LoginScreen1.getname();    
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          const UserAccountsDrawerHeader(
-            accountName: Text('entre_tiempos.com'),
-            accountEmail: Text('entre_tiempos@gmail.com'),
-            currentAccountPicture: CircleAvatar(
+           UserAccountsDrawerHeader(
+            accountName: Text(username),
+            accountEmail: const Text('entre_tiempos@gmail.com'),
+            currentAccountPicture: const  CircleAvatar(
                 child: ClipOval(
               child: Image(
                 image: AssetImage(

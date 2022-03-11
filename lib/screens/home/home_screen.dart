@@ -679,7 +679,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   InkWell(
                                                     child: Container(
                                                           child:
-                                                          _prioritycontroller == 1
+                                                          _prioritycontroller == 2
                                                             ?const Text('ALTA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 18 ))
                                                             :const Text('ALTA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 15 )),
 
