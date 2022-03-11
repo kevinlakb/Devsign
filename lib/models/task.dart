@@ -36,11 +36,6 @@ class AppTask {
         title: 'Tarea de Ingles II',
         description: 'Modal verbs can, may, might, should, ought to, would....',
         date: DateTime.utc(2022, 02, 22),
-        priority: 0),
-    Task(
-        title: 'Tarea de Ingles II',
-        description: 'Modal verbs can, may, might, should, ought to, would....',
-        date: DateTime.utc(2022, 02, 22),
         priority: 1,
         state: true),
   ];
