@@ -23,13 +23,13 @@ class _AppBarActionState extends State<AppBarAction> {
         child: Container(
           
           child: Row(
-            children: const  [
-              Icon(Icons.circle , color: AppTheme.kYellowLight ),
-              SizedBox(width: 15,),
-              Icon(Icons.circle , color: AppTheme.kOrangeLight ),
-              SizedBox(width: 15,),
-              Icon(Icons.circle , color: AppTheme.kRedLight ),
-              SizedBox(width: 15,)
+            children:   [
+              IconButton(onPressed:() => {} , icon: const Icon(Icons.circle , color: AppTheme.kYellowLight )),
+              //const SizedBox(width: 10,),              
+              IconButton(onPressed:() => {} , icon: const Icon(Icons.circle , color: AppTheme.kOrangeLight )),            
+              //const SizedBox(width: 10,),                 
+              IconButton(onPressed:() => {} , icon: const Icon(Icons.circle , color: AppTheme.kRedLight  )),            
+
             ],
           ),
           //duration: const Duration(milliseconds: 300),
