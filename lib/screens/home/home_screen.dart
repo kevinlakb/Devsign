@@ -82,132 +82,167 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: const Icon(Icons.calendar_today, size: 25),
                       color: Colors.white,
                     ),
-              const SizedBox(
-                width: 20,
-              )
+           
             ],
           ),
           const AppBarAction(),
         ],
-        title: Text('Hola!, $username',
-            style: const TextStyle(
+        title: const Text('Inicio',
+            style:  TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 22,
                 color: Colors.white,
                 fontWeight: FontWeight.bold)),
         //elevation: 0,
       ),
-      body: Column(
-          //mainAxisAlignment: MainAxisAlignment.center,
-          //mainAxisSize: MainAxisSize.max,
-          children: [
-            Calendar(y0ffset: isCalOpen),
-            AnimatedContainer(
-                duration: const Duration(milliseconds: 500),
-                transform: Matrix4.translationValues(0, y0ffset, 0),
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  shrinkWrap: true,
-                  itemBuilder: (context, i) => tasksList[i].state
-                      ? Container()
-                      : Column(children: [
-                          Container(
-                            width: size.width * 0.95,
-                            margin: const EdgeInsets.only(bottom: 5, top: 5),
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                                '${tasksList[i].date!.day} de ${months[tasksList[i].date!.month - 1]} del  ${tasksList[i].date!.year}',
-                                style: const TextStyle(fontSize: 16)),
-                          ),
-                          AnimatedContainer(
-                              duration: const Duration(milliseconds: 300),
-                              margin: EdgeInsets.only(
-                                  left: 30, right: size.width * 0.025),
-                              padding: const EdgeInsets.only(
-                                  left: 16, top: 0, right: 16, bottom: 0),
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                color: tasksList[i]
-                                    .colorPriority[tasksList[i].priority],
-                                borderRadius: BorderRadius.circular(12),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.shade300,
-                                    blurRadius: 2.0,
-                                    spreadRadius: 0.0,
-                                    offset: const Offset(2.0,
-                                        5.0), // shadow direction: bottom right
-                                  )
-                                ],
-                              ),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: size.width * 0.62,
-                                        child: Text(
-                                            '${tasksList[i].title}' /*.toUpperCase()*/,
-                                            style: const TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white)),
-                                      ),
-                                      SizedBox(
-                                        width: size.width * 0.2,
-                                        child: Align(
-                                          alignment: Alignment.centerRight,
-                                          child: !tasksList[i].activated
-                                              ? IconButton(
-                                                  onPressed: () {
-                                                    setState(() {
-                                                      tasksList[i].activated =
-                                                          true;
-                                                    });
-                                                  },
-                                                  icon: const Icon(
-                                                      Icons
-                                                          .arrow_drop_down_sharp,
-                                                      size: 25),
-                                                  color: Colors.white,
-                                                )
-                                              : IconButton(
-                                                  onPressed: () {
-                                                    setState(() {
-                                                      tasksList[i].activated =
-                                                          false;
-                                                    });
-                                                  },
-                                                  icon: const Icon(
-                                                      Icons.arrow_drop_up_sharp,
-                                                      size: 25),
-                                                  color: Colors.white,
-                                                ),
+      body: Container(
+        padding:const EdgeInsets.all(20),
+        child: Column(
+            //mainAxisAlignment: MainAxisAlignment.center,
+            //mainAxisSize: MainAxisSize.max,
+            children: [
+              Calendar(y0ffset: isCalOpen),
+              AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
+                  transform: Matrix4.translationValues(0, y0ffset, 0),
+                  child: ListView.builder(
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    itemBuilder: (context, i) => tasksList[i].state
+                        ? Container()
+                        : Column(children: [
+                            Container(
+                              width: size.width * 0.9,
+                              margin: const EdgeInsets.only(bottom: 5, top: 5),
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                  '${tasksList[i].date!.day} de ${months[tasksList[i].date!.month - 1]} del  ${tasksList[i].date!.year}',
+                                  style: const TextStyle(fontSize: 16)),
+                            ),
+                            AnimatedContainer(
+                                duration: const Duration(milliseconds: 300),
+                                margin: EdgeInsets.only(
+                                    left: 30, right: size.width * 0.025),
+                                padding: const EdgeInsets.only(
+                                    left: 16, top: 0, right: 16, bottom: 0),
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: tasksList[i]
+                                      .colorPriority[tasksList[i].priority],
+                                  borderRadius: BorderRadius.circular(12),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.shade300,
+                                      blurRadius: 2.0,
+                                      spreadRadius: 0.0,
+                                      offset: const Offset(2.0,
+                                          5.0), // shadow direction: bottom right
+                                    )
+                                  ],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      
+                                      children: [
+                                        SizedBox(
+                                          width: size.width * 0.51,
+                                          child: Text(
+                                              '${tasksList[i].title}' /*.toUpperCase()*/,
+                                              style: const TextStyle(
+                                                  fontSize: 18,
+                                                  color: Colors.white)),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      InkWell(
+                                        SizedBox(
+                                          width: size.width * 0.2,
+                                          child: Align(
+                                            alignment: Alignment.centerRight,
+                                            child: !tasksList[i].activated
+                                                ? IconButton(
+                                                    onPressed: () {
+                                                      setState(() {
+                                                        tasksList[i].activated =
+                                                            true;
+                                                      });
+                                                    },
+                                                    icon: const Icon(
+                                                        Icons
+                                                            .arrow_drop_down_sharp,
+                                                        size: 25),
+                                                    color: Colors.white,
+                                                  )
+                                                : IconButton(
+                                                    onPressed: () {
+                                                      setState(() {
+                                                        tasksList[i].activated =
+                                                            false;
+                                                      });
+                                                    },
+                                                    icon: const Icon(
+                                                        Icons.arrow_drop_up_sharp,
+                                                        size: 25),
+                                                    color: Colors.white,
+                                                  ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        InkWell(
+                                            child: AnimatedContainer(
+                                                duration: const Duration(
+                                                    milliseconds: 300),
+                                                width: 120,
+                                                height: tasksList[i].activated
+                                                    ? 40.0
+                                                    : 0,
+                                                decoration: BoxDecoration(
+                                                    color: Colors.transparent,
+                                                    border: Border.all(
+                                                      color: Colors.white,
+                                                      width: 2,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            12)),
+                                                child: const Center(
+                                                  child: Text('EMPEZAR',
+                                                      style: TextStyle(
+                                                          fontFamily: 'Open Sans',
+                                                          //fontWeight: FontWeight.bold,
+                                                          fontSize: 16,
+                                                          fontStyle:
+                                                              FontStyle.italic,
+                                                          color: Colors.white)),
+                                                )),
+                                            splashColor: const Color.fromRGBO(
+                                                255, 255, 255, 0.6),
+                                            onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, 'Development');
+                                            }),
+                                        const SizedBox(
+                                          width: 20,
+                                        ),
+                                        InkWell(
                                           child: AnimatedContainer(
                                               duration: const Duration(
                                                   milliseconds: 300),
-                                              width: 150,
+                                              width: 120,
                                               height: tasksList[i].activated
                                                   ? 40.0
                                                   : 0,
                                               decoration: BoxDecoration(
                                                   color: Colors.transparent,
                                                   border: Border.all(
-                                                    color: Colors.white,
-                                                    width: 2,
-                                                  ),
+                                                      color: Colors.white,
+                                                      width: 2),
                                                   borderRadius:
-                                                      BorderRadius.circular(
-                                                          12)),
+                                                      BorderRadius.circular(12)),
                                               child: const Center(
-                                                child: Text('EMPEZAR',
+                                                child: Text('EDITAR',
                                                     style: TextStyle(
                                                         fontFamily: 'Open Sans',
                                                         //fontWeight: FontWeight.bold,
@@ -218,50 +253,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                               )),
                                           splashColor: const Color.fromRGBO(
                                               255, 255, 255, 0.6),
-                                          onTap: () {
-                                            Navigator.pushNamed(
-                                                context, 'Development');
-                                          }),
-                                      const SizedBox(
-                                        width: 20,
-                                      ),
-                                      InkWell(
-                                        child: AnimatedContainer(
-                                            duration: const Duration(
-                                                milliseconds: 300),
-                                            width: 150,
-                                            height: tasksList[i].activated
-                                                ? 40.0
-                                                : 0,
-                                            decoration: BoxDecoration(
-                                                color: Colors.transparent,
-                                                border: Border.all(
-                                                    color: Colors.white,
-                                                    width: 2),
-                                                borderRadius:
-                                                    BorderRadius.circular(12)),
-                                            child: const Center(
-                                              child: Text('EDITAR',
-                                                  style: TextStyle(
-                                                      fontFamily: 'Open Sans',
-                                                      //fontWeight: FontWeight.bold,
-                                                      fontSize: 16,
-                                                      fontStyle:
-                                                          FontStyle.italic,
-                                                      color: Colors.white)),
-                                            )),
-                                        splashColor: const Color.fromRGBO(
-                                            255, 255, 255, 0.6),
-                                        onTap: () {},
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              )),
-                        ]),
-                  itemCount: tasksList.length,
-                )),
-          ]),
+                                          onTap: () {},
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )),
+                          ]),
+                    itemCount: tasksList.length,
+                  )),
+            ]),
+      ),
       floatingActionButton: Container(
         height: size.width * 0.15,
         width: size.width * 0.15,
@@ -589,11 +591,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 children: [
                                                   InkWell(
                                                     child: Container(
+                                                          child: 
+                                                          _prioritycontroller == 0
+                                                            ?const Text('BAJA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 18 ))
+                                                            :const Text('BAJA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 15 )),
+
+                                                          padding: 
+                                                            _prioritycontroller == 
+                                                                    0
+                                                                  ?const EdgeInsets.all(8)
+                                                                  :const EdgeInsets.all(5),
+
+                                                            
+                                                          
                                                         width:
                                                             _prioritycontroller ==
                                                                     0
-                                                                ? 120
-                                                                : 100,
+                                                                ? 110
+                                                                : 95,
                                                         height:
                                                             _prioritycontroller ==
                                                                     0
@@ -619,11 +634,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   ),
                                                   InkWell(
                                                       child: Container(
+                                                          child:
+                                                          _prioritycontroller == 1
+                                                            ?const Text('MEDIA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 18 ))
+                                                            :const Text('MEDIA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 15 )),
+
+                                                                
+
+                                                          padding: 
+                                                            _prioritycontroller == 
+                                                                    1
+                                                                  ?const EdgeInsets.all(10)
+                                                                  :const EdgeInsets.all(5),
+
                                                           width:
                                                               _prioritycontroller ==
                                                                       1
-                                                                  ? 120
-                                                                  : 100,
+                                                                  ? 110
+                                                                  : 95,
                                                           height:
                                                               _prioritycontroller ==
                                                                       1
@@ -650,11 +678,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       }),
                                                   InkWell(
                                                     child: Container(
+                                                          child:
+                                                          _prioritycontroller == 1
+                                                            ?const Text('ALTA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 18 ))
+                                                            :const Text('ALTA' , textAlign: TextAlign.center , style: TextStyle(color: Colors.white, fontSize: 15 )),
+
+                                                             
+
+                                                          padding: 
+                                                            _prioritycontroller == 
+                                                                    2
+                                                                  ?const EdgeInsets.all(10)
+                                                                  :const EdgeInsets.all(5),
+
                                                         width:
                                                             _prioritycontroller ==
                                                                     2
-                                                                ? 120
-                                                                : 100,
+                                                                ? 110
+                                                                : 95,
                                                         height:
                                                             _prioritycontroller ==
                                                                     2
