@@ -1,3 +1,4 @@
+import 'package:entre_tiempos/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class AppBarAction extends StatefulWidget {
@@ -20,14 +21,19 @@ class _AppBarActionState extends State<AppBarAction> {
     return Center(
       child: InkWell(
         child: Container(
-          //duration: const Duration(milliseconds: 300),
-          margin: const EdgeInsets.only(right: 10),
-          height: 22,
-          width: size.width * 0.21,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
+          
+          child: Row(
+            children: const  [
+              Icon(Icons.circle , color: AppTheme.kYellowLight ),
+              SizedBox(width: 15,),
+              Icon(Icons.circle , color: AppTheme.kOrangeLight ),
+              SizedBox(width: 15,),
+              Icon(Icons.circle , color: AppTheme.kRedLight ),
+              SizedBox(width: 15,)
+            ],
           ),
+          //duration: const Duration(milliseconds: 300),
+
         ),
         onTap: () {
           setState(() {
